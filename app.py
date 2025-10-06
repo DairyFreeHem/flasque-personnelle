@@ -1,11 +1,10 @@
 from flask import Flask
-
-from flasque import Flasque, FLASQUE_ENDPOINT
-
-app = Flask(__name__)
+from personal import Personal
 
 
-app.register_blueprint(Flasque)
+app = Flask(__name__, template_folder=None)
+app.register_blueprint(Personal)
+
 
 @app.route("/")
 def hello_world():
