@@ -1,4 +1,59 @@
-body
+:root
 {
-    background-color: black;
+    --menu-background-color: #bdbdbd;
+    --menu-background-color-dark:#7d7d7d;
+}
+
+body, html
+{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #0d7173;
+}
+
+.menu-body
+{
+    width: 100%;
+    height: 100%;
+}
+.menu-taskbar
+{
+    height: fit-content;
+    padding: 2px;
+    width: 100%;
+    background-color: var(--menu-background-color);
+}
+
+.divide-tiny{
+    margin-left: 4px;
+    background-color: var(--menu-background-color) ;
+    border-left: 1px solid var(--menu-background-color-dark);
+    border-right: 1px solid white;
+    height: 100%;
+    width: 2px;
+}
+
+.divide{
+    margin-left: 2px;
+    background-color: var(--menu-background-color) ;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    -webkit-box-shadow: 1px .5px 0px .5px var(--menu-background-color-dark);
+    -moz-box-shadow: 1px .5px 0px .5px var(--menu-background-color-dark);
+    box-shadow: 1px .5px 0px .5px var(--menu-background-color-dark);
+    box-sizing:border-box;
+    height: 20px;
+    width: 3px;
+}
+
+
+#start-btn img
+{
+    width: 16px;
+    height: 16px;
+    margin-bottom: 3px;
+    align-items: center;
 }

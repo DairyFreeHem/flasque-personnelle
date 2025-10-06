@@ -7,13 +7,32 @@
         </title>
             <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/98.css/dist/98.css') }}">
             <link rel="stylesheet" href="{{url_for('static',filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}"> 
-
+            <link rel="stylesheet" href="{{url_for('static',filename='personal/style.css')}}"> 
             {% block head %}
             {% endblock %}
     </head>
     <body>
-        {% block body %}
-        {% endblock %}
+        <div class=" w-100 h-100 d-flex flex-column align-items-end">
+            <div class="menu-body">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <div class="menu-taskbar d-flex flex-row align-items-center ">
+                <div>
+                    <button id="start-btn">
+                        <img src="{{url_for('static',filename='personal/assets/icons/emblem-web-22.png')}}">
+                         <b>Start</b>
+                    </button> 
+                </div>
+                <div class="divide-tiny">
+                </div>
+                <div class="divide">
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
         <script src="{{url_for('static',filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     </body>
 </html>

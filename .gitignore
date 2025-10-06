@@ -2,3 +2,5 @@
 __pycache__/*
 */__pycache__/*
 static/node_modules/**
+Assets
+Assets/**
