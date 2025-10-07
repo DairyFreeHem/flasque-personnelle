@@ -10,3 +10,5 @@ I'm currently developing it, please come back later...
 ## Design
 For the design I used:
 * [Bootstrap](https://getbootstrap.com/)
+* [win98.css](https://jdan.github.io/98.css/)
+* Icons I got from the [WIN98SE](https://github.com/nestoris/Win98SE) repo by nestoris 
