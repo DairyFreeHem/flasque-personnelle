@@ -2,6 +2,7 @@
 {
     --menu-background-color: #bdbdbd;
     --menu-background-color-dark:#7d7d7d;
+    --menu-app-selected-color: #dcdcdc;
 }
 
 body, html
@@ -25,6 +26,7 @@ body{
     padding: 2px;
     width: 100%;
     background-color: var(--menu-background-color);
+    
 }
 
 .divide-tiny{
@@ -35,6 +37,27 @@ body{
     height: 100%;
     width: 2px;
 }
+
+
+.taskbar-app-chooser-app
+{
+    padding-left: 2px;
+    height: inherit;
+
+    width: 13em;
+}
+
+.taskbar-app-chooser-app img
+{
+    margin-bottom: 3px;
+}
+.taskbar-app-chooser-app.selected
+{
+    background-color: var(--menu-app-selected-color);
+    font-weight: bold;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+}
+
 
 .divide{
     margin-left: 2px;
@@ -49,6 +72,48 @@ body{
     width: 3px;
 }
 
+.taskbar-start-btn
+{
+    min-width: fit-content;
+    max-width: 10%;
+}
+.taskbar-app-chooser
+{
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    height: 100%;
+    width: 88%;
+    padding: 2px;
+}
+
+.taskbar-side-panel
+{
+    width: 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+    padding: 0px 5px;
+    margin-left: 4px;
+    text-align: right;
+}
+
+.taskbar-side-panel-icons
+{
+    display: flex;
+    align-items: flex-start;
+    width: 65%;
+}
+
+.taskbar-side-panel-icons img
+{
+    margin: 2px;
+}
+.taskbar-side-panel-time
+{
+    width: 20%;
+}
 
 #start-btn img
 {
@@ -56,4 +121,5 @@ body{
     height: 16px;
     margin-bottom: 3px;
     align-items: center;
+
 }

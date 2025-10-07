@@ -17,22 +17,34 @@
                 {% block body %}
                 {% endblock %}
             </div>
-            <div class="menu-taskbar d-flex flex-row align-items-center ">
-                <div>
+            <div class="menu-taskbar d-flex flex-row align-items-center " tabindex="-1">
+                <div class="taskbar-start-btn">
                     <button id="start-btn">
                         <img src="{{url_for('static',filename='personal/assets/icons/emblem-web-22.png')}}">
                          <b>Start</b>
                     </button> 
                 </div>
-                <div class="divide-tiny">
+                <div class="divide-tiny"></div>
+                <div class="divide"></div>
+                <div class="taskbar-app-chooser d-flex flex-row">
+                    <div class="taskbar-app-chooser-app selected" id="main-window-chooser">
+                        <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
+                        <b>Welcome</b>
+                    </div>
                 </div>
-                <div class="divide">
-                </div>
-                <div>
-                    
+                <div class="divide-tiny"></div>
+                <div class="taskbar-side-panel">
+                    <div class="taskbar-side-panel-icons">
+                        <img src="{{url_for('static',filename='personal/assets/icons/bluetooth-active-16.png')}}">
+                        <img src="{{url_for('static',filename='personal/assets/icons/software-update-up-to-date-16.png')}}">
+                    </div>
+                    <div class="taskbar-side-panel-time">
+                        <span id="time"></span>
+                    </div>
                 </div>
             </div>
         </div>
         <script src="{{url_for('static',filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='personal/script.js')}}"></script>
     </body>
 </html>
