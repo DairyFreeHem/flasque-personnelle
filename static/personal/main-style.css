@@ -13,6 +13,7 @@
     background-color: var(--menu-background-color);
     box-shadow: 0px 1px white, inset 0px -1px var(--menu-background-color-dark);
     padding-left: 3px;
+    padding-bottom: 2px;
 }
 
 .app-tooltip .dropdown
@@ -55,7 +56,7 @@
     background-color: black;
     width:9%;
     max-width: 10%;
-    box-shadow: inset -1px -1px white;
+    box-shadow: inset 1px 1px white, -1px -1px var(--menu-background-color-dark), 0 -1px white;
 }
 
 
@@ -74,7 +75,7 @@
 .app-tooltip .tooltips .dropdown .dropdown-menu .dropdown-item:hover
 {
     
-    background-color: blue;
+    background-color: #000082;
     color: white;
 }
 
@@ -99,8 +100,8 @@
 {
 
     padding: 3px 0px;
-    box-shadow: -1px -1px black, inset 1px 1px white,
-                 1px 1px white, inset -1px -1px black;
+    box-shadow: -1px -1px var(--menu-background-color-dark), inset 1px 1px white,
+                 1px 1px white, inset -1px -1px var(--menu-background-color-dark);
     height: fit-content;
     min-height: fit-content;
 }
@@ -123,7 +124,23 @@
 .address-bar
 {
     margin-top: 3px;
-    padding-left: 3px;
+    padding-left: 4px;
     padding-right: 10px;
 }
 
+.address-bar img
+{
+    padding-bottom: 2px;
+}
+
+
+.main-content-head
+{
+    padding: 5px;
+}
+
+.main-content
+{
+    box-shadow: inset 2px 2px black, 1px 1px white;
+
+}
