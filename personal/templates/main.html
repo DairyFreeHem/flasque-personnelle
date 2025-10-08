@@ -5,7 +5,52 @@ Hello
 {% endblock %}
 
 {% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='personal/main-style.css')}}"> 
 {% endblock %}
 
 {% block body %}
+
+<div class="main-window" id="main-window">
+  <div class="w-100 h-100 d-flex flex-column">
+
+    <div class="title-bar">
+        <div class="title-bar-text">
+            <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
+            <b>Welcome to my website</b>
+        </div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="control-bar-parent">
+      <div class="control-bar d-flex flex-column w-100 h-25">
+
+        <div class="app-tooltip d-flex flex-row">
+          <div class="divide"></div>
+          <div class="tooltips">
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="tooltip-help-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Help</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="tooltip-help-btn">
+                <a class="dropdown-item" href="#">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="tooltips-logo d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static',filename='personal/assets/icons/emblem-web-16.png')}}">
+          </div>
+        </div>
+        <div class="address-bar d-flex flex-row w-100 align-items-center">
+          <div class="divide"></div>
+          <span> Address </span>
+          <div class="field-border w-100">
+            <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
+            Work area
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

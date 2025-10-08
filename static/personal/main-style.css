@@ -1,0 +1,129 @@
+.main-window
+{
+    width: 50em;
+    height: 30em;
+    margin-left: 50px;
+    background-color: var(--menu-background-color);
+}
+
+.app-tooltip
+{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--menu-background-color);
+    box-shadow: 0px 1px white, inset 0px -1px var(--menu-background-color-dark);
+    padding-left: 3px;
+}
+
+.app-tooltip .dropdown
+{
+    margin-left: 5px;
+}
+
+.app-tooltip .tooltips
+{
+    width: 90%;
+}
+
+.app-tooltip .tooltips button
+{
+    background:transparent;
+    border: none;
+    box-shadow: none;
+    min-width: fit-content !important;
+    padding: 0px;
+    text-align: center;
+}
+
+.app-tooltip .tooltips button span
+{
+   margin-left: 10px;
+}
+
+.app-tooltip .tooltips button:hover
+{
+    box-shadow: inset 1px 1px white, 1px 1px var(--menu-background-color-dark);
+}
+
+.app-tooltip .tooltips button:active
+{
+    box-shadow: inset 1px 1px black, 1px 1px white;
+}
+
+.app-tooltip .tooltips-logo
+{
+    background-color: black;
+    width:9%;
+    max-width: 10%;
+    box-shadow: inset -1px -1px white;
+}
+
+
+.app-tooltip .tooltips .dropdown .dropdown-menu
+{
+    border-radius: 0px;
+    background-color:  var(--menu-background-color);
+    width: fit-content;
+    min-width: fit-content;
+    max-width: 40px;
+    padding: 2px 2px;
+    box-shadow: inset 1px 1px white, 1px 1px var(--menu-background-color-dark);
+    
+}
+
+.app-tooltip .tooltips .dropdown .dropdown-menu .dropdown-item:hover
+{
+    
+    background-color: blue;
+    color: white;
+}
+
+
+.main-window .divide
+{
+    align-self: center;
+}
+
+.main-window .app-tooltip .divide
+{
+    height: 20px;
+}
+
+.control-bar-parent
+{
+    padding: 5px;
+
+}
+
+.control-bar
+{
+
+    padding: 3px 0px;
+    box-shadow: -1px -1px black, inset 1px 1px white,
+                 1px 1px white, inset -1px -1px black;
+    height: fit-content;
+    min-height: fit-content;
+}
+
+.control-bar
+{
+    font-size: 12px;
+}
+
+.control-bar a
+{
+    font-size: 12px;
+}
+
+.address-bar span
+{
+    padding: 0 5px;
+}
+
+.address-bar
+{
+    margin-top: 3px;
+    padding-left: 3px;
+    padding-right: 10px;
+}
+

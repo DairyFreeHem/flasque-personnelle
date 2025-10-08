@@ -5,6 +5,21 @@
             {% block title %}
             {% endblock %}
         </title>
+            <style>
+                @font-face {
+                        font-family: MSW98UI;
+                        src: url("{{url_for('static',filename='personal/assets/fonts/MSW98UI-Regular.woff2')}}");
+                    }
+                @font-face {
+                        font-family: MSW98UI;
+                        src: url("{{url_for('static',filename='personal/assets/fonts/MSW98UI-Bold.woff2')}}");
+                        font-weight: bold;
+                    }
+                span, b, p
+                {
+                    font-family: MSW98UI;
+                }
+            </style>
             <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/98.css/dist/98.css') }}">
             <link rel="stylesheet" href="{{url_for('static',filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}"> 
             <link rel="stylesheet" href="{{url_for('static',filename='personal/style.css')}}"> 
@@ -12,8 +27,10 @@
             {% endblock %}
     </head>
     <body>
+        <script src="{{url_for('static',filename='node_modules/dayjs/dayjs.min.js')}}"></script>
+
         <div class=" w-100 h-100 d-flex flex-column align-items-end">
-            <div class="menu-body">
+            <div class="menu-body d-flex justify-content-center align-items-center">
                 {% block body %}
                 {% endblock %}
             </div>
@@ -44,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <script src="{{url_for('static',filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{url_for('static',filename='personal/script.js')}}"></script>
     </body>
 </html>

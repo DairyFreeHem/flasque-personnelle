@@ -3,10 +3,12 @@
 function setTime()
 {
     let timeVar = document.getElementById("time");
-    const date = new Date();
-    const time = date.getHours() + ":" + date.getUTCMinutes();
+    const now = dayjs();
+
+    const time = now.format('HH:mm');
     timeVar.innerHTML = time;
 
 }
 
 setTime();
+
