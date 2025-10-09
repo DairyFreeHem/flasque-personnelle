@@ -19,7 +19,7 @@ Hello
             <b>Welcome to my website</b>
         </div>
       <div class="title-bar-controls">
-        <button aria-label="Close"></button>
+        <button aria-label="Close" tabindex="-1"></button>
       </div>
     </div>
     <div class="control-bar-parent">
@@ -44,9 +44,12 @@ Hello
         <div class="address-bar d-flex flex-row w-100 align-items-center">
           <div class="divide"></div>
           <span> Address </span>
-          <div class="field-border w-100">
-            <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
-            Work area
+          <div class="field-border d-flex w-100">
+            <div class="field-text w-100">
+              <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
+              <span>Work area</span>
+            </div>
+            <div class="field-dropdown"><img src="{{url_for('static',filename='node_modules/98.css/icon/button-down.svg')}}"></img></div>
           </div>
         </div>
       </div>
@@ -54,7 +57,35 @@ Hello
 
     <div class="main-content-head w-100 h-100">
       <div class="main-content w-100 h-100">
-        asfsf
+        <div class="main-content-content h-100 w-100">
+          <div class="main-content-left w-25 h-100">
+            <div class="d-flex flex-column align-items-center w-100 h-100">
+              <div class=" main-content-left-title">
+                <div class="w-100">
+                  <img src="{{url_for('static',filename='personal/assets/icons/stock_person_48.png')}}">
+                </div>
+                <div class="w-100">
+                  <h1>
+                    Hi! I'm Rem
+                  </h1>
+                  <h3> I build things </h3>
+                </div>
+              </div>
+              <div class="line d-flex flex-row">
+                <div class="red w-25"></div>
+                <div class="yellow w-25"></div>
+                <div class="green w-25"></div>
+                <div class="blue w-25"></div>
+              </div>
+              <div class="main-content-left-subtitle w-100 h-100">
+                <p>Welcome to My website, inspired by Windows 98 and made with love using HTML,CSS,JS and a little bit of Python sprinkled on the backend.</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-right w-75 h-100">
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
