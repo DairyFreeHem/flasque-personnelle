@@ -47,7 +47,7 @@ Hello
           <div class="field-border d-flex w-100">
             <div class="field-text w-100">
               <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
-              <span>Work area</span>
+              <span>R:/</span>
             </div>
             <div class="field-dropdown"><img src="{{url_for('static',filename='node_modules/98.css/icon/button-down.svg')}}"></img></div>
           </div>
@@ -57,12 +57,12 @@ Hello
 
     <div class="main-content-head w-100 h-100">
       <div class="main-content w-100 h-100">
-        <div class="main-content-content h-100 w-100">
+        <div class="main-content-content d-flex flex-row h-100 w-100">
           <div class="main-content-left w-25 h-100">
             <div class="d-flex flex-column align-items-center w-100 h-100">
               <div class=" main-content-left-title">
                 <div class="w-100">
-                  <img src="{{url_for('static',filename='personal/assets/icons/stock_person_48.png')}}">
+                  <img src="{{url_for('static',filename='personal/assets/icons/stock_person_48.png')}}" alt="">
                 </div>
                 <div class="w-100">
                   <h1>
@@ -78,12 +78,33 @@ Hello
                 <div class="blue w-25"></div>
               </div>
               <div class="main-content-left-subtitle w-100 h-100">
-                <p>Welcome to My website, inspired by Windows 98 and made with love using HTML,CSS,JS and a little bit of Python sprinkled on the backend.</p>
+                <p>Welcome to My website, inspired by Windows 98 and made with ❤️ using HTML,CSS,JS and a little bit of Python sprinkled on the backend🐍.</p>
               </div>
             </div>
           </div>
           <div class="main-content-right w-75 h-100">
-
+            <div class="w-100 h-100">
+              <div class="container">
+                <div class="row">
+                <div class="content-item col-3 col-md-3">
+                  <a href="https://www.linkedin.com/in/rem-m-4932bb215/">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{url_for('static',filename='personal/assets/icons/people-globe.png')}}" alt="">
+                        <p>My LinkedIn</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="content-item col-3 col-md-3">
+                  <a href="https://github.com/DairyFreeHem">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{url_for('static',filename='personal/assets/icons/visual-studio-32.png')}}" alt="">
+                        <p>My github</p>
+                    </div>
+                  </a>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

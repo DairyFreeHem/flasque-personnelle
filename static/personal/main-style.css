@@ -173,7 +173,10 @@
     height: 100%;
     
 }
-
+.main-content-left
+{
+    min-width: 25%;
+}
 .main-content-left > div
 {
     padding-top: 30px;
@@ -227,4 +230,24 @@
     padding-left: 16px;
     padding-right: 5px;
     text-align: left;
+}
+
+
+.main-content-right > div
+{
+    padding: 5px;
+}
+
+.main-content-right .container .content-item 
+{
+    width: 120px;
+    height: 130px;
+}
+
+.content-item a
+{
+    height: 100px;
+    width: 100px;
+    text-decoration: none;
+    color: inherit;
 }
