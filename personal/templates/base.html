@@ -19,6 +19,18 @@
                 {
                     font-family: MSW98UI;
                 }
+                body{
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/arrow.cur')}}"), auto;
+                }
+                button,a
+                {
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto;
+                }
+                button span
+                {
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto;
+                }
+
             </style>
             <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/98.css/dist/98.css') }}">
             <link rel="stylesheet" href="{{url_for('static',filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}"> 

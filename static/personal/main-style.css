@@ -114,12 +114,17 @@
     padding-top: 0px;
 }
 
-.control-bar
+.control-bar span, .control-bar p
 {
-    font-size: 12px;
+    font-size: 16px;
 }
 
-.control-bar a
+.app-tooltip a
+{
+    font-size: 16px;
+}
+
+.control-bar
 {
     font-size: 12px;
 }
@@ -127,6 +132,7 @@
 .address-bar > span
 {
     padding: 0 5px;
+    pointer-events: none;
 }
 
 .address-bar
@@ -151,7 +157,7 @@
 {
     box-shadow: inset 2px 2px black, 1px 1px white;
     background-color: white;
-    padding: 5px;
+    padding: 1px;
 
 }
 
@@ -172,6 +178,10 @@
     display: inline-block;
     height: 100%;
     
+}
+.field-dropdown img
+{
+    height: 24px;
 }
 .main-content-left
 {
@@ -251,4 +261,20 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     width: 100px;
     text-decoration: none;
     color: inherit;
+}
+
+.content-item a:focus p
+{
+    background-color: var(--item-selected-color);
+    color: white;
+}
+
+.content-item a:focus img
+{
+    background-color: var(--item-selected-color);
+}
+
+.content-item a img
+{
+    margin-bottom: 5px;
 }
