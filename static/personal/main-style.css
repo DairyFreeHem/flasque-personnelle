@@ -326,6 +326,11 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     background-size: 12px;
 }
 
+.title-bar-text
+{
+    font-size: 16px;
+}
+
 .main-mobile-window
 {
     display: none;
@@ -449,5 +454,28 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
         display: block;
     }
 
+
+}
+
+@media only screen and (max-width: 1370px) {
+  .taskbar-side-panel-icons
+  {
+    display: none;
+  }
+
+  .taskbar-side-panel-time
+  {
+    width: 100%;
+    text-align: end;
+  }
+
+
+}
+
+@media only screen and (max-width: 1160px) {
+    .main-window
+    {
+        margin-left: 0;
+    }
 
 }
