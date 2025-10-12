@@ -352,8 +352,9 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
 .mobile-tooltip-window button
 {
     padding-right: 0px;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 60px;
+    box-shadow: none;
     text-align: center;
     font-weight: bold;
 }
@@ -448,6 +449,7 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
   .main-window {
     display: none;
   }
+
 
     .main-mobile-window
     {
