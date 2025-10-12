@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             {% block title %}
             {% endblock %}
@@ -20,15 +21,15 @@
                     font-family: MSW98UI;
                 }
                 body{
-                    cursor: url("{{url_for('static',filename='personal/assets/cursor/arrow.cur')}}"), auto;
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/arrow.cur')}}"), auto !important;
                 }
                 button,a
                 {
-                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto;
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto !important;
                 }
                 button span
                 {
-                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto;
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto !important;
                 }
 
             </style>

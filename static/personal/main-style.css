@@ -63,7 +63,7 @@
 }
 
 
-.app-tooltip .tooltips .dropdown .dropdown-menu
+.tooltips .dropdown .dropdown-menu
 {
     border-radius: 0px;
     background-color:  var(--menu-background-color);
@@ -324,4 +324,130 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     width: 100%;
     background-position: top 6px left 4.6px;
     background-size: 12px;
+}
+
+.main-mobile-window
+{
+    display: none;
+    background-color: var(--menu-background-color);
+}
+
+
+.mobile-top-window
+{
+    height: 10%;
+}
+.mobile-tooltip-window
+{
+    min-height: 10%;
+    height: 10%;
+    padding-left: 10px;
+}
+
+.mobile-tooltip-window button
+{
+    padding-right: 0px;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+.mobile-tooltip-window .dropdown-menu a
+{
+    width: 100px;
+    text-align: center;
+}
+
+
+.horizontal-divide
+{
+    height: 1px;
+    border-top: 1px solid var(--menu-background-color-dark);
+    border-bottom: 1px solid white;
+    margin-left: 20px;
+    width: 90%;
+}
+
+.cool-sidebar
+{
+    width: 12.448%;
+    min-width: 12.448%;
+    background: linear-gradient(180deg,rgba(0, 0, 130, 1) 57%, rgba(0, 0, 255, 1) 78%, rgba(0, 0, 255, 1) 82%, rgba(0, 0, 130, 0.99) 100%);
+}
+
+.cool-sidebar div
+{
+    transform: rotate(-90deg);
+    margin-bottom: 30px;
+    width: 100%;
+}
+.cool-sidebar h1
+{
+    font-weight: bold;
+    color: white;
+    width: 200px;
+}
+
+.mobile-content-title
+{
+    margin-top: 2px;
+    padding-left: 10px;
+}
+
+.mobile-content-title img
+{
+    height: 60px;
+    width: 60px;
+}
+
+.mobile-content-title .mobile-title-header
+{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.mobile-menu-items 
+{
+    margin-top: 10px;
+}
+
+.mobile-menu-items .content-item
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.mobile-menu-items a div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.mobile-menu-items a img
+{
+    margin-bottom: 16px;
+}
+
+.mobile-menu-items a p
+{
+    margin-left: 20px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-window {
+    display: none;
+  }
+
+    .main-mobile-window
+    {
+        display: block;
+    }
+
+
 }

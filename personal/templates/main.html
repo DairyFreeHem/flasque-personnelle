@@ -120,6 +120,75 @@ Hello
   </div>
 </div>
 
+<div class="main-mobile-window w-100 h-100" id="main-mobile-window">
+  <div class="h-100 w-100 d-flex flex-row">
+    <div class="h-100 cool-sidebar d-flex justify-content-center align-items-end">
+      <div>
+        <h1>Website 98</h1>
+      </div>
+    </div>
+    <div class="h-100 w-100 d-flex flex-column">
+      <div class="mobile-tooltip-window d-flex align-items-center w-100">
+          <div class="tooltips">
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="tooltip-help-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Help</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="tooltip-help-btn">
+                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="horizontal-divide"></div>
+      <div class="mobile-content">
+        <div class=" mobile-content-title w-100">
+          <div class="w-100">
+            <img src="{{url_for('static',filename='personal/assets/icons/stock_person_48.png')}}" alt="">
+          </div>
+          <div class="mobile-title-header w-100">
+            <h1>
+              Hi! I'm Rem
+            </h1>
+            <h4> I build things </h4>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-divide"></div>
+      <div class="mobile-menu-items">
+        <div class="w-100 h-100">
+          <div class="container">
+            <div class="content-item col-3 col-md-3">
+              <a href="https://www.linkedin.com/in/rem-m-4932bb215/">
+                <div class="w-100 h-100">
+                    <img src="{{url_for('static',filename='personal/assets/icons/people-globe.png')}}" alt="">
+                    <p>My LinkedIn</p>
+                </div>
+              </a>
+            </div>
+            <div class="content-item col-3 col-md-3">
+              <a href="https://github.com/DairyFreeHem">
+                <div class="w-100 h-100">
+                    <img src="{{url_for('static',filename='personal/assets/icons/visual-studio-32.png')}}" alt="">
+                    <p>My github</p>
+                </div>
+              </a>
+            </div>
+            <div class="content-item col-3 col-md-3">
+              <a href="mailto:remmachna@gmail.com">
+                <div class="w-100 h-100">
+                    <img src="{{url_for('static',filename='personal/assets/icons/mail-message-new-64.png')}}" alt="">
+                    <p>Mail me</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- About Modal -->
 <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog">

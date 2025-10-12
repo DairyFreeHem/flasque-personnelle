@@ -133,3 +133,11 @@ body{
     margin-left: 3px;
 
 }
+
+@media only screen and (max-width: 700px) {
+
+    .menu-taskbar
+    {
+        display: none !important;
+    }
+}
