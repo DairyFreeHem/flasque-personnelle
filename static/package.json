@@ -2,6 +2,7 @@
   "dependencies": {
     "98.css": "^0.1.21",
     "bootstrap": "^5.3.8",
-    "dayjs": "^1.11.18"
+    "dayjs": "^1.11.18",
+    "md-block": "^0.0.1"
   }
 }

@@ -11,7 +11,7 @@ Hello
 {% block body %}
 
 <div class="main-window" id="main-window">
-  <div class="w-100 h-100 d-flex flex-column">
+  <div class="w-100 h-100 d-flex flex-column window-3d">
 
     <div class="title-bar">
         <div class="title-bar-text">
@@ -33,7 +33,7 @@ Hello
               <span>Help</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="tooltip-help-btn">
-                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
               </div>
             </div>
           </div>
@@ -102,6 +102,14 @@ Hello
                     </div>
                   </a>
                 </div>
+                <div class="content-item col-3 col-md-3">
+                  <a href="mailto:remmachna@gmail.com">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{url_for('static',filename='personal/assets/icons/mail-message-new-64.png')}}" alt="">
+                        <p>Mail me</p>
+                    </div>
+                  </a>
+                </div>
                 </div>
               </div>
             </div>
@@ -111,4 +119,42 @@ Hello
     </div>
   </div>
 </div>
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content window-3d">
+      <div class="">
+        <div class="title-bar">
+          <div class="title-bar-text">
+              <img src="{{url_for('static',filename='personal/assets/icons/stock_person_16.png')}}">
+              <b class="modal-title" id="aboutModalLabel">About my website</b>
+          </div>
+          <div class="title-bar-controls">
+            <button type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="h-100 w-100">
+          <md-block>
+            Made in 2025.
+
+            Tools used in this site:
+            * [Bootstrap](https://getbootstrap.com/)
+            * [win98.css](https://jdan.github.io/98.css/)
+            * Icons I got from the [WIN98SE](https://github.com/nestoris/Win98SE) repo by nestoris 
+            * [MS W98 UI Font](https://martyr.shop/products/ms-w98-ui) from Martyr-- 
+            * [Md-block](https://md-block.verou.me) for markdown
+          </md-block>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}

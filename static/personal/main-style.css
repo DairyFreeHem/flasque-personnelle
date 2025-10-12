@@ -276,5 +276,52 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
 
 .content-item a img
 {
+    height: 52px;
+    width: 52px;
     margin-bottom: 5px;
+}
+
+.modal-content
+{
+    border-radius: 0px;
+    border: 2px solid var(--menu-background-color);
+    box-shadow: inset 1px 1px white, 1px 1px #252525;
+    background-color: var(--menu-background-color);
+    padding: 1px;
+}
+
+.modal-footer
+{
+    border: none;
+}
+
+.modal-body, .modal-footer
+{
+    background: none;
+}
+
+.window-3d
+{
+    border: 1px solid var(--menu-background-color);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow:  inset -1px -1px var(--menu-background-color-dark),inset 1px 1px white;
+
+
+}
+
+.main-window .title-bar-controls
+{
+    width: 27px;
+    height: 23px;
+    padding-right: 2px;
+}
+
+.main-window .title-bar-controls button
+{
+    height: 23px;
+    width: 23px;
+    width: 100%;
+    background-position: top 6px left 4.6px;
+    background-size: 12px;
 }

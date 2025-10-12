@@ -1,4 +1,9 @@
-
+const oneMinuteInMs = 60000;
+function startTime()
+{
+    setInterval(setTime,oneMinuteInMs);
+    setTime();
+}
 
 function setTime()
 {
@@ -41,3 +46,11 @@ document.querySelectorAll(".app-tooltip .tooltips .dropdown button").forEach((to
 
     });
 });
+
+
+document.body.onload = () =>
+{
+    let timeVar = document.getElementById("time");
+    const remainingMS = (oneMinuteInMs - (dayjs().second() * 1000) + (dayjs().millisecond()));
+    setTimeout(startTime,remainingMS);
+};
