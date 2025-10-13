@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link rel="icon" href="{{url_for('static',filename='favicon.png')}}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/98.css/dist/98.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='personal/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='errors/style.css') }}">
+        <style>
+                @font-face {
+                        font-family: MSW98UI;
+                        src: url("{{url_for('static',filename='personal/assets/fonts/MSW98UI-Regular.woff2')}}");
+                    }
+                @font-face {
+                        font-family: MSW98UI;
+                        src: url("{{url_for('static',filename='personal/assets/fonts/MSW98UI-Bold.woff2')}}");
+                        font-weight: bold;
+                    }
+                span, b, p, a, h1, h2, h3, h4, h5
+                {
+                    font-family: MSW98UI;
+                }
+                body{
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/arrow.cur')}}"), auto !important;
+                }
+                button,a
+                {
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto !important;
+                }
+                button span
+                {
+                    cursor: url("{{url_for('static',filename='personal/assets/cursor/click.cur')}}"),auto !important;
+                }
+
+            </style>
+    </head>
+    <body>
+        
+        <div class="main-error-message">
+            <div class="error-title">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        {% block msgbox_title %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <div class="error-content">
+                <div class="error-content-left">
+                    {% block msgbox_image %}
+                    {% endblock %}
+                </div>
+                <div class="error-content-right">
+                    <md-block>
+                        {% block msgbox_body %}
+                        {% endblock %}
+                    </md-block>
+                </div>
+
+            </div>
+            <div class="error-footer">
+                <button>Ok</button>
+            </div>
+        </div>
+        
+        <script type="module" src="{{url_for('static',filename='node_modules/md-block/md-block.js')}}"></script>
+    </body>
+</html>

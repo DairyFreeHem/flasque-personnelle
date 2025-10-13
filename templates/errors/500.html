@@ -1,0 +1,17 @@
+{% extends "errors/error_base.html" %}
+
+{% block msgbox_title %}
+Error 404 not found
+{% endblock %}
+
+
+{% block msgbox_image %}
+<img src="{{url_for('static',filename='personal/assets/icons/dialog-error-32.png')}}">
+{% endblock %}
+
+
+
+{% block msgbox_body %}
+Internal server error
+If you encounter this, please email me :).
+{% endblock %}

@@ -5,4 +5,4 @@ from . import Personal
 
 @Personal.route('/')
 def opener():
-    return render_template("main.html")
+    return render_template("personal/main.html")
