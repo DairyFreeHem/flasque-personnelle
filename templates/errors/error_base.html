@@ -63,10 +63,17 @@
 
             </div>
             <div class="error-footer">
-                <button>Ok</button>
+                <button onclick="redirectToMain()">OK</button>
             </div>
         </div>
         
         <script type="module" src="{{url_for('static',filename='node_modules/md-block/md-block.js')}}"></script>
+        <script>
+            function redirectToMain()
+            {
+                const redirectURL = "{{url_for('personal.opener')}}"
+                window.location.replace(redirectURL);
+            }
+        </script>
     </body>
 </html>

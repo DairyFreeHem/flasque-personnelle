@@ -56,6 +56,18 @@ div{
     margin-right: 5px;
 }
 
+.error-footer a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.error-footer a:focus
+{
+    border: none;
+}
+
+
 .error-content-left
 {
     display: flex;
@@ -77,4 +89,27 @@ div{
     width: 350px;
     height: 100%;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 430px) {
+    body
+    {
+        margin: 0;
+    }
+    .main-error-message
+    {
+        margin: 0 5px;
+        width: 100%;
+    }
+
+    @media only screen and (min-height: 800px) {
+            .main-error-message
+            {
+                width: 90%;
+            }
+            .error-content-right
+            {
+                padding-right: 5px;
+            }
+    }
 }
