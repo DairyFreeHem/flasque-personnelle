@@ -31,6 +31,8 @@
                 "FLASK_DEBUG": "1"
             },
             "args": [
+                "--app",
+                "app.py:create_app(None)",
                 "run",
                 "--debugger",
                 "--host=0.0.0.0",

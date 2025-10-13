@@ -356,7 +356,6 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     width: 60px;
     box-shadow: none;
     text-align: center;
-    font-weight: bold;
 }
 .mobile-tooltip-window .dropdown-menu a
 {
