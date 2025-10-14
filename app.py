@@ -3,7 +3,7 @@ from flask import Flask
 
 
 
-def create_app(config_filename):
+def create_app(config_filename = None):
     app = Flask(__name__,template_folder="templates")
 
     if config_filename is not None and Path(config_filename).exists():
