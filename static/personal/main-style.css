@@ -76,6 +76,10 @@
 }
 
 
+.main-window .dropdown span
+{
+    font-weight: normal;
+}
 
 
 .app-tooltip .tooltips .dropdown .dropdown-menu .dropdown-item:hover
@@ -354,7 +358,6 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     padding-right: 0px;
     height: 50px;
     width: 60px;
-    box-shadow: none;
     text-align: center;
 }
 .mobile-tooltip-window .dropdown-menu a
@@ -391,6 +394,7 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
     font-weight: bold;
     color: white;
     width: 200px;
+    margin-top: 9px;
 }
 
 .mobile-content-title
@@ -479,4 +483,9 @@ background: linear-gradient(318deg,rgba(255, 255, 255, 1) 72%, rgba(105, 237, 69
         margin-left: 0;
     }
 
+}
+
+.underline
+{
+    text-decoration: underline;
 }

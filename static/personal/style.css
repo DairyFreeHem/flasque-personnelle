@@ -80,8 +80,13 @@ body{
 
 .taskbar-start-btn
 {
-    min-width: 85px;
-    max-width: 85px;
+    min-width: 89px;
+    max-width: 89px;
+}
+
+.menu-taskbar .divide-tiny
+{
+    margin-left:0;
 }
 .taskbar-app-chooser
 {

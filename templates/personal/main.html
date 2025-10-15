@@ -6,6 +6,12 @@ Rem
 
 {% block head %}
 <link rel="stylesheet" href="{{url_for('static',filename='personal/main-style.css')}}"> 
+<style>
+  .main-window .title-bar-controls button
+  {
+    cursor: url("{{url_for('static',filename='personal/assets/cursor/arrow.cur')}}"), auto !important;
+  }
+</style>
 {% endblock %}
 
 {% block body %}
@@ -30,7 +36,7 @@ Rem
           <div class="tooltips">
             <div class="dropdown">
               <button class="dropdown-toggle" type="button" id="tooltip-help-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Help</span>
+              <span><span class="underline">H</span>elp</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="tooltip-help-btn">
                 <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
@@ -132,7 +138,7 @@ Rem
           <div class="tooltips">
             <div class="dropdown">
               <button class="dropdown-toggle" type="button" id="tooltip-help-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Help</span>
+              <span><span class="underline">H</span>elp</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="tooltip-help-btn">
                 <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#aboutModal">
