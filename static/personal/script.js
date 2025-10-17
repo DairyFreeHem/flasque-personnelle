@@ -1,10 +1,14 @@
 const oneMinuteInMs = 60000;
+
+// Delay time refresh until a new minute starts
+// from when the user entered the site
 function startTime()
 {
     setInterval(setTime,oneMinuteInMs);
-    setTime();
+    setTime(); // Set time for the first time
 }
 
+// Set time in taskbar
 function setTime()
 {
     let timeVar = document.getElementById("time");
@@ -17,6 +21,9 @@ function setTime()
 
 setTime();
 
+
+// Add delay animation to tooltip items
+// to simulate Windows 98 tooltip press
 document.querySelectorAll(".app-tooltip .tooltips .dropdown button").forEach((toolTipItem) => 
 {
     toolTipItem.addEventListener("click",function(){
@@ -48,6 +55,7 @@ document.querySelectorAll(".app-tooltip .tooltips .dropdown button").forEach((to
 });
 
 
+// Initialze data on load
 document.body.onload = () =>
 {
     let timeVar = document.getElementById("time");
