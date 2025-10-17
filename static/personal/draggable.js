@@ -81,12 +81,7 @@ document.querySelectorAll(draggableSelector).forEach((element) =>
         parentPosition.pos3 = e.clientX;
         parentPosition.pos4 = e.clientY;
         // set the element's new position:
-        // selectedElement.style.top = e.clientY + 'px';
-        // selectedElement.style.left = e.clientX + 'px';
         selectedElement.style.top = (selectedElement.offsetTop - parentPosition.pos2) + "px";
-        console.log("xPos: "+e.clientX);
-        console.log("pos1:"+parentPosition.pos1 );
-        console.log((selectedElement.offsetLeft - parentPosition.pos1));
         selectedElement.style.left = (selectedElement.offsetLeft - parentPosition.pos1) + "px";
     }
   }
