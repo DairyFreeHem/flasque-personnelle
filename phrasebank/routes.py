@@ -1,8 +1,8 @@
 from flask import render_template, current_app
 
-from . import Personal
+from . import phrasebank
 
 
-@Personal.route('/')
+@phrasebank.route('/')
 def opener():
     return "<h1>Hello</h1>"

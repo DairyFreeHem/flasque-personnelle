@@ -12,6 +12,9 @@ def create_app(config_filename = None):
     from personal import Personal
     app.register_blueprint(Personal)
     
+    from phrasebank import phrasebank
+    app.register_blueprint(phrasebank)
+
     from errors import Errors
     app.register_blueprint(Errors)
 

@@ -3,9 +3,9 @@ from globals import ROOT_PATH
 
 
 
-PERSONAL_ENDPOINT = 'phrasebank'
-PERSONAL_PREFIX = '/'
-Personal = Blueprint(PERSONAL_ENDPOINT,__name__,url_prefix=PERSONAL_PREFIX)
+PHRASEBANK_ENDPOINT = 'phrasebank'
+PERSONAL_PREFIX = '/phrasebank'
+phrasebank = Blueprint(PHRASEBANK_ENDPOINT,__name__,url_prefix=PERSONAL_PREFIX)
 
 
 from . import routes
