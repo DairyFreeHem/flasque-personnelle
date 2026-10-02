@@ -16,7 +16,7 @@ Rem
 
 {% block body %}
 
-<div class="main-window draggable" id="main-window">
+<div class="main-window draggable" id="main-window" onmousedown="setToForefront('main-window')">
   <div class="w-100 h-100 d-flex flex-column window-3d">
 
     <div class="title-bar">
@@ -108,6 +108,15 @@ Rem
                     </div>
                   </a>
                 </div>
+                <!--Testme-->
+                <!-- <div class="content-item col-3 col-md-3">
+                  <button onclick="callNewMenu('test')">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{url_for('static',filename='personal/assets/icons/visual-studio-32.png')}}" alt="">
+                        <p>Testme</p>
+                    </div>
+                  </button>
+                </div> -->
                 <div class="content-item col-3 col-md-3">
                   <a href="mailto:rem@machna.ch">
                     <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">

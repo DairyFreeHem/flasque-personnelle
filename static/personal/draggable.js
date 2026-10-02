@@ -16,21 +16,27 @@ class windowPos {
     }
 }
 
-document.querySelectorAll(draggableSelector).forEach((element) =>
-{
-    let elementPos = new windowPos();
 
-    const elementId = element.id;
+  queryAllSelectables();
 
-    draggableElements.set(element.id, elementPos);
-    
-    let titleBar = element.querySelector(".title-bar");
-    if (titleBar)
+
+  function queryAllSelectables()
+  {
+    document.querySelectorAll(draggableSelector).forEach((element) =>
     {
-        titleBar.onmousedown = dragMouseDown;
-    }
-    
-});
+      let elementPos = new windowPos();
+
+      const elementId = element.id;
+
+      draggableElements.set(element.id, elementPos);
+      
+      let titleBar = element.querySelector(".title-bar");
+      if (titleBar)
+      {
+          titleBar.onmousedown = dragMouseDown;
+      }
+    });
+  }
 
   function getTitlebarParent(element)
   {

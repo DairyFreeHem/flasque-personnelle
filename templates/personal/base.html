@@ -45,7 +45,7 @@
         <script src="{{url_for('static',filename='node_modules/dayjs/dayjs.min.js')}}"></script>
 
         <div class=" w-100 h-100 d-flex flex-column align-items-end">
-            <div class="menu-body d-flex justify-content-center align-items-center">
+            <div id="desktop-window" class="menu-body d-flex justify-content-center align-items-center">
                 {% block body %}
                 {% endblock %}
             </div>
@@ -80,5 +80,6 @@
         <script type="module" src="{{url_for('static',filename='node_modules/md-block/md-block.js')}}"></script>
         <script src="{{url_for('static',filename='personal/script.js')}}"></script>
         <script src="{{url_for('static',filename='personal/draggable.js')}}"></script>
+        <script src="{{url_for('static',filename='personal/window.js')}}"></script>
     </body>
 </html>
