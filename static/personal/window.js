@@ -1,4 +1,4 @@
-    let menuHTML = `
+    const menuHTML = `
             <div class="main-window draggable" id="{window_id}" onmousedown="setToForefront('{window_id}')" style="top: 253px; left: -27px;">
         <div class="w-100 h-100 d-flex flex-column window-3d">
 
@@ -8,7 +8,7 @@
                     <b>{window_name}</b>
                 </div>
             <div class="title-bar-controls">
-                <button aria-label="Close" tabindex="-1" disabled=""></button>
+                <button aria-label="Close" onclick="destroyMe('{window_id}')"></button>
             </div>
             </div>
             <div class="control-bar-parent">
@@ -36,7 +36,7 @@
                 <div class="field-border d-flex w-100">
                     <div class="field-text w-100">
                     <img src="/static/personal/assets/icons/stock_person_16.png">
-                    <span>R:/</span>
+                    <span>R:/{window_name}</span>
                     </div>
                     <div class="field-dropdown"><img src="/static/node_modules/98.css/icon/button-down.svg"></div>
                 </div>
@@ -51,13 +51,12 @@
                     <div class="d-flex flex-column align-items-center w-100 h-100">
                     <div class=" main-content-left-title">
                         <div class="w-100">
-                        <img src="/static/personal/assets/icons/stock_person_48.png" alt="">
+                        <img src="{window_image}"  alt="">
                         </div>
                         <div class="w-100">
-                        <h1>
-                            Hi! I'm Rem
-                        </h1>
-                        <h3> I build things </h3>
+                        <h1>{window_title}</h1>
+
+                        <h3> {window_subtitle} </h3>
                         </div>
                     </div>
                     <div class="line d-flex flex-row">
@@ -67,39 +66,14 @@
                         <div class="blue w-25"></div>
                     </div>
                     <div class="main-content-left-subtitle w-100 h-100">
-                        <p>Welcome to My website, inspired by Windows 98 and made with ❤️ using HTML,CSS,JS and a little bit of Python sprinkled on the backend🐍.</p>
+                        <p>{window_description}</p>
                     </div>
                     </div>
                 </div>
                 <div class="main-content-right w-75 h-100">
                     <div class="w-100 h-100">
-                    <div class="container">
-                        <div class="row">
-                        <div class="content-item col-3 col-md-3">
-                        <a href="https://www.linkedin.com/in/rem-m-4932bb215/">
-                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <img src="/static/personal/assets/icons/people-globe.png" alt="">
-                                <p>My LinkedIn</p>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="content-item col-3 col-md-3">
-                        <a href="https://github.com/DairyFreeHem">
-                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <img src="/static/personal/assets/icons/visual-studio-32.png" alt="">
-                                <p>My github</p>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="content-item col-3 col-md-3">
-                        <a href="mailto:rem@machna.ch">
-                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                                <img src="/static/personal/assets/icons/mail-message-new-64.png" alt="">
-                                <p>Mail me</p>
-                            </div>
-                        </a>
-                        </div>
-                        </div>
+                    <div class="container content-window">
+                    
                     </div>
                     </div>
                 </div>
@@ -110,29 +84,47 @@
         </div>
     `;
 
-function callNewMenu(name)
+
+// Create new menu
+function callNewMenu(name, window_title, window_subtitle = "",window_description = "")
 {
     const backgroundWindow = document.getElementById("desktop-window");
     let newMenu = menuHTML;
-    newMenu = newMenu.replace("{window_name}",name);
+    newMenu = newMenu.replaceAll("{window_name}",name);
     newMenu = newMenu.replaceAll("{widnow_id}",crypto.randomUUID());
+    newMenu = newMenu.replace("{window_title}",window_title);
+    newMenu = newMenu.replace("{window_subtitle}",window_subtitle);
+    newMenu = newMenu.replace("{window_description}",window_description);
 
     backgroundWindow.insertAdjacentHTML("beforeend", newMenu);
     queryAllSelectables();
 }
 
+///
+/// Set clicked window to forefront
 function setToForefront(clickedId)
 {
     document.querySelectorAll('.main-window').forEach((element) =>
     {
-        const p = document.getElementById(element.id);
+        const selectedWindow = document.getElementById(element.id);
         if(element.id === clickedId)
         {
-            p.style.zIndex= 101;
+            selectedWindow.style.zIndex= 101;
         }
         else
         {
-            p.style.zIndex = 99;
+            selectedWindow.style.zIndex = 99;
         }
     });
+}
+
+// Destroy window by id
+function destroyMe(clickedId)
+{
+    const sacrifice = document.getElementById(clickedId)
+    
+    if (sacrifice != null)
+    {
+        sacrifice.remove();
+    }
 }
